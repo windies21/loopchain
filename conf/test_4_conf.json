@@ -1,0 +1,33 @@
+{
+  "LOOPCHAIN_DEFAULT_CHANNEL": "icon_dex",
+  "CHANNEL_OPTION" : {
+    "icon_dex": {
+      "store_valid_transaction_only": true,
+      "send_tx_type": 2,
+      "load_cert": false,
+      "consensus_cert_use": false,
+      "tx_cert_use": false,
+      "tx_hash_version": 1,
+      "genesis_tx_hash_version": 0,
+      "key_load_type": 0,
+      "public_path": "./resources/test_pkis/test_4_public.der",
+      "private_path": "./resources/test_pkis/test_4_private.der",
+      "private_password": "test"
+    },
+    "loopchain_test": {
+      "store_valid_transaction_only": true,
+      "send_tx_type": 2,
+      "load_cert": false,
+      "consensus_cert_use": false,
+      "tx_cert_use": false,
+      "tx_hash_version": 1,
+      "genesis_tx_hash_version": 0,
+      "key_load_type": 0,
+      "public_path": "./resources/test_pkis/test_4_public.der",
+      "private_path": "./resources/test_pkis/test_4_private.der",
+      "private_password": "test"
+    }
+  },
+  "PORT_PEER": 7500,
+  "SUBSCRIBE_USE_HTTPS": true
+}

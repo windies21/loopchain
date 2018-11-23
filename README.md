@@ -94,6 +94,109 @@ $ export PW_icon_dex={ENTER_MY_PASSWORD}
 $ cd ../../
 ```
 
+#### Write channel_manage_data.json for private loopchain network
+
+* It is necessary to execute loopchain privately.
+* Radiostation must have this file.
+* Peer does not need this.
+* It's quite simple.
+
+Format
+
+```
+{
+  "[CHANNEL_NAME]": {
+    "score_package": "score/icx",
+    "peers": [
+      {
+        "peer_target": "[PEER_IP]:[PEER_PORT]"
+      },
+      ...
+    ]
+  },
+  ...
+}
+```
+
+Example for local test
+
+```
+{
+  "icon_dex": {
+    "score_package": "score/icx",
+    "peers": [
+      {
+        "peer_target": "[local_ip]:7100"
+      },
+      {
+        "peer_target": "[local_ip]:7200"
+      },
+      {
+        "peer_target": "[local_ip]:7300"
+      },
+      {
+        "peer_target": "[local_ip]:7400"
+      },
+      {
+        "peer_target": "[local_ip]:7900"
+      },
+      {
+        "peer_target": "[local_ip]:8100"
+      }
+    ]
+  },
+  "loopchain_test": {
+    "score_package": "loopchain/default",
+    "peers": [
+      {
+        "peer_target": "[local_ip]:7100"
+      },
+      {
+        "peer_target": "[local_ip]:7200"
+      },
+      {
+        "peer_target": "[local_ip]:7300"
+      },
+      {
+        "peer_target": "[local_ip]:7500"
+      },
+      {
+        "peer_target": "[local_ip]:8000"
+      },
+      {
+        "peer_target": "[local_ip]:8200"
+      }
+    ]
+  }
+}
+```
+
+#### Run loopchain as a radiostation
+
+```
+$ ./loopchain.py rs
+```
+
+#### Run loopchain as a peer
+
+```
+$ ./loopchain.py peer -r {RADIOSTATION_IP:PORT} -o conf/{PEER_CONFIG}.json
+```
+
+#### Run Local Test with RS and 4 Peers
+
+```
+$ ./loopchain.py rs
+
+$ ./loopchain.py peer -r 127.0.0.1:7102 -o conf/test_0_conf.json
+
+$ ./loopchain.py peer -r 127.0.0.1:7102 -o conf/test_1_conf.json
+
+$ ./loopchain.py peer -r 127.0.0.1:7102 -o conf/test_2_conf.json
+
+$ ./loopchain.py peer -r 127.0.0.1:7102 -o conf/test_3_conf.json
+```
+
 #### Run loopchain as a Citizen Node
 
 ```

@@ -1,0 +1,48 @@
+{
+  "icon_dex": {
+    "score_package": "score/icx",
+    "peers": [
+      {
+        "peer_target": "[local_ip]:7100"
+      },
+      {
+        "peer_target": "[local_ip]:7200"
+      },
+      {
+        "peer_target": "[local_ip]:7300"
+      },
+      {
+        "peer_target": "[local_ip]:7400"
+      },
+      {
+        "peer_target": "[local_ip]:7900"
+      },
+      {
+        "peer_target": "[local_ip]:8100"
+      }
+    ]
+  },
+  "loopchain_test": {
+    "score_package": "loopchain/default",
+    "peers": [
+      {
+        "peer_target": "[local_ip]:7100"
+      },
+      {
+        "peer_target": "[local_ip]:7200"
+      },
+      {
+        "peer_target": "[local_ip]:7300"
+      },
+      {
+        "peer_target": "[local_ip]:7500"
+      },
+      {
+        "peer_target": "[local_ip]:8000"
+      },
+      {
+        "peer_target": "[local_ip]:8200"
+      }
+    ]
+  }
+}
